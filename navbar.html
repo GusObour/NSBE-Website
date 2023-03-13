@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style1.css">
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="navbar.js"></script>
+    <script src="https://kit.fontawesome.com/3ef2c5d8f9.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -44,11 +45,23 @@
     </nav>
     <main>
       <section class="header">
-        <h1>Kansas State NSBE</h1>
-        <p>To increase the number of culturally responsible Black Engineers who excel academically, succeed professionally and positively impact the community</p>
-        <a class="btn-bgstroke" href="">Join Now</a>
+        <div class = "nsbe-info">
+          <h1>Kansas State NSBE</h1>
+          <p>National Society of Black Engineers | Region 5</p>  
+        </div>
       </section>
       </div>
+      <section id="mission-statement">
+        <div class="quotation-icons">
+          <i class="fas fa-quote-left fa-5x" id="quote-left"></i>
+          <div class="text-container">
+            <h2>Our Mission Statement</h2>
+            <p>To increase the number of culturally responsible Black engineers who excel academically, succeed professionally and positively impact the community.</p>
+          </div>
+        <img src="NSBE-Logo-03.png" alt="NSBE logo">
+        <i class="fas fa-quote-right fa-5x" id="quote-right"></i>
+      </div>
+      </section>
       <section class="info">
         <div class="box">
           <h2>Academic Support</h2>
@@ -63,47 +76,70 @@
           <p>Encourage higher education and STEM exploration within local communities through direct engagement. Leverage technical and communication skills to make an impact on curious learners of all ages.</p>
         </div>
       </section>
-
-      <section class="events">
-        <h2>Upcoming Events</h2>
-        <div class="events_list">
-          <ul>
-            <li>
-              <h3>Event 1</h3>
-              <p>Date: 1st January 2023</p>
-              <p>Location: XYZ</p>
-              <button>Register Now</button>
-            </li>
-            <li>
-              <h3>Event 2</h3>
-              <p>Date: 1st February 2023</p>
-              <p>Location: ABC</p>
-              <button>Register Now</button>
-            </li>
-            <li>
-              <h3>Event 3</h3>
-              <p>Date: 1st March 2023</p>
-              <p>Location: PQR</p>
-              <button>Register Now</button>
-            </li>
-          </ul>
-        </div>
-      </section>
-
+      <div class="events-container">
+        <h2>1 event</h2>
+        <input class ="event-search" type="text" placeholder="Find An Event"/>
+        <div class="events"></div>
+      </div>
       <section class="membership">
-        <h2>Membership</h2>
+        <h2>Sponsers</h2>
         <p>Membership in Kansas State NSBE is open to all engineering and pre-engineering students at Kansas State University. To become a member, please fill out the membership form and pay the membership fee.</p>
         <a href="#">Membership Form</a>
       </section>
-
       <section class="sponsors">
         <h2>Our Sponsors</h2>
-        <ul>
-          <li><img src="sponsor1.jpg" alt="Sponsor 1"></li>
-          <li><img src="sponsor2.jpg" alt="Sponsor 2"></li>
-          <li><img src="sponsor3.jpg" alt="Sponsor 3"></li>
-          <li><img src="sponsor4.jpg" alt="Sponsor 4"></li>
-        </ul>
+        <div class="row">
+          <div class="column">
+            <a href="https://www.cpchem.com/">
+            <div class="card">
+              <img src="CPChem_Logo_NoTag_RGB.jpg" alt="Jane" style="width:100%">
+              <div class="container">
+                <h2>Chevron Phillips Chemical Company</h2>
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="column">
+            <a href="https://www.phillips66.com/">
+            <div class="card">
+              <img src="Phillips_66_logo.svg.png" alt="Jane" style="width:100%">
+              <div class="container">
+                <h2>Phillips 66</h2>
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="column">
+            <a href="https://www.garmin.com/en-US/">
+            <div class="card">
+              <img src="garmin.png" alt="Jane" style="width:100%">
+              <div class="container">
+                <h2>Garmin</h2>
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="column">
+            <a href="https://www.cpchem.com/">
+            <div class="card">
+              <img src="CPChem_Logo_NoTag_RGB.jpg" alt="Jane" style="width:100%">
+              <div class="container">
+                <h2>ConocoPhillips</h2>
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="column">
+            <a href="https://www.cpchem.com/">
+            <div class="card">
+              <img src="CPChem_Logo_NoTag_RGB.jpg" alt="Jane" style="width:100%">
+              <div class="container">
+                <h2>Burns & McDonnell </h2>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="contact-us">

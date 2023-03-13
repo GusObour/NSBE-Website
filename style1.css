@@ -80,17 +80,28 @@
 
 }
 .header {
+    position: relative;
+    height: 500px;
     width: 100%;
     padding:60px 0;
-    text-align: center;
-    color: #512888;
-    background-image:url("N");
+    text-align: left;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Banner1.PNG");
+    /* background-image:url("Banner.PNG"); */
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center; 
-    background-size: 25%;
+    background-size: cover;
+    position: relative;
+
   }
-  
-  
+  .nsbe-info{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
   .btn-bgstroke {
     font-size: 20px;
     display: inline-block;
@@ -138,7 +149,6 @@
       margin: 0 auto;
       padding: 50px;
       background-color: #fff;
-      margin-top: 100px;
       text-align: center;
       display: inline-flex;
     }
@@ -160,14 +170,13 @@
     }
     
     .events {
-        width: 1200px;
         margin: 0 auto;
         padding: 50px;
         background-color: #D1D1D1;
-        margin-top: 100px;
         text-align: center;
         display: flex;
         flex-direction: column;
+        border-radius: 30px;
     }
     
     .events h2 {
@@ -212,3 +221,192 @@
         display: flex;
         flex-direction: column;
     }
+
+
+    .events-container {
+      max-width: 900px;
+      margin: 20px auto;
+    }
+    
+    .events-container h2 {
+      font-size: 30px;
+      border-left: 4px solid #023047;
+      padding-left: 20px;
+    }
+    
+    .events-container .events {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+    
+    .events-container .event {
+      box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+      padding: 24px;
+      border-radius: 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: all 400ms ease;
+      background-color: #D1D1D1;
+    }
+    
+    .events-container .event:hover {
+      transform: scale(1.01);
+    }
+    
+    .events-container .event-title {
+      font-size: 20px;
+      padding: 10px 0;
+      margin: 0;
+      color: #512888;
+    }
+    .events-container .event-location {
+      font-size: 15px;
+      margin: 0;
+      color: #512888;
+    }
+    
+    .events-container .event-details {
+      margin-top: 6px;
+      font-size: 14px;
+      color: black;
+      line-height: 1.8;
+      flex: 1;
+    }
+    
+    .events-container .eventSignUp-btn {
+      text-decoration: none;
+      border: 1px solid #f0ad00;
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 20px;
+      transition: all 400ms ease;
+    }
+    
+    .events-container .eventSignUp-btn:hover {
+      background: #512888;
+      color: #fff;
+    }
+    
+    .events-container .event-search {
+      width: 100%;
+      padding: 12px 24px;
+      font-size: 18px;
+      font-family: "Rubik", sans-serif;
+      box-sizing: border-box;
+      border: 1px solid black;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    
+    @media (max-width: 940px) {
+      .events-container .events {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .events-container .events {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+    #mission-statement {
+      background-color: #f9f9f9;
+      padding: 50px;
+      text-align: center;
+    }
+    #quote-right{
+      grid-row: 1 /  span 2;
+      grid-column: 3
+    }
+    #quote-left{
+      grid-row: 1 /  span 2;
+      grid-column: 1;
+    }
+    
+    #mission-statement .quotation-icons {
+      display: grid;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    
+    #mission-statement .quotation-icons i {
+      font-size: 36px;
+      color: #666666;
+    }
+    
+    #mission-statement .text-container {
+      flex: 1;
+      grid-row: 1;
+      grid-column: 2;
+    }
+    
+    #mission-statement h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #212121;
+      flex: 1;
+    }
+    
+    #mission-statement p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #666666;
+      flex: 1;
+    }
+    
+    #mission-statement img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      grid-row: 2;
+      grid-column: 2;
+    }
+
+
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+    .column a {
+      text-decoration: none;
+    }
+    
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+    
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .container {
+      padding: 0 16px;
+    }
+    
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .title {
+      color: grey;
+    }
+    
