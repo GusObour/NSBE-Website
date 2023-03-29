@@ -132,7 +132,6 @@ $(document).ready(function(){
     const eventsContainer = document.querySelector(".events-container .events");
     const eventsSearch = document.querySelector(".events-container .event-search");
     const dateFilter = document.querySelector("#date-filter");
-    const alphaSort = document.querySelector("#alpha-sort");
     
     let searchTerm = "";
     let filteredEvents = events.slice(); // create a copy of events array
@@ -145,12 +144,6 @@ $(document).ready(function(){
     
     const createEventListingCards = () => {
       eventsContainer.innerHTML = "";
-    
-      // sort events by title if alphaSort button is clicked
-      if (alphaSort.classList.contains("active")) {
-        console.log("sleep")
-        filteredEvents.sort((a, b) => a.eventTitle.localeCompare(b.eventTitle));
-      }
     
       filteredEvents.forEach((event) => {
         // filter events based on date
@@ -236,10 +229,6 @@ $(document).ready(function(){
     });
     eventsContainer.addEventListener("click",(e)=>{
         e.target.setAttribute("target", "_blank");
-    });
-    alphaSort.addEventListener("click",(e)=>{
-        console.log("sleep")
-        filteredEvents = filteredEvents.sort((a, b) => a.eventTitle.localeCompare(b.eventTitle));
     });
     dateFilter.addEventListener("change", ()=>{
         const selectedOption = dateFilter.value; // Get the value of the selected option
