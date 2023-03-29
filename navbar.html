@@ -53,13 +53,13 @@
       </div>
       <section id="mission-statement">
         <div class="quotation-icons">
-          <i class="fas fa-quote-left fa-5x" id="quote-left"></i>
+          <i class="fas fa-quote-left fa-2x" id="quote-left"></i>
           <div class="text-container">
             <h2>Our Mission Statement</h2>
             <p>To increase the number of culturally responsible Black engineers who excel academically, succeed professionally and positively impact the community.</p>
           </div>
         <img src="Images\NSBE-Logo-03.png" alt="NSBE logo">
-        <i class="fas fa-quote-right fa-5x" id="quote-right"></i>
+        <i class="fas fa-quote-right fa-2x" id="quote-right"></i>
       </div>
       </section>
       <section class="info">
@@ -76,11 +76,29 @@
           <p>Encourage higher education and STEM exploration within local communities through direct engagement. Leverage technical and communication skills to make an impact on curious learners of all ages.</p>
         </div>
       </section>
-      <div class="events-container">
+      <!-- <div class="events-container">
         <h2>1 event</h2>
         <input class ="event-search" type="text" placeholder="Find An Event"/>
         <div class="events"></div>
+      </div> -->
+      <div class="events-container">
+        <div class="events-header">
+          <h2>Events</h2>
+          <input class="event-search" type="text" placeholder="Find An Event"/>
+          <div class="events-filter">
+            <select id="date-filter">
+              <option value="all">All Dates</option>
+              <option value="today">Today</option>
+              <option value="tomorrow">Tomorrow</option>
+              <option value="this-week">This Week</option>
+              <option value="next-week">Next Week</option>
+            </select>
+            <button id="alpha-sort">Sort A-Z</button>
+          </div>
+        </div>
+        <div class="events"></div>
       </div>
+      
       <section class="membership">
         <h1>membership</h1>
         <p>Membership in Kansas State NSBE is open to all engineering and pre-engineering students at Kansas State University. To become a member, please fill out the membership form and pay the membership fee.</p>

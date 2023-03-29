@@ -156,22 +156,30 @@
     }
     
     .info {
-      margin: 0 auto;
+      /* margin: 0 auto;
       padding: 50px;
       background-color: #fff;
       text-align: center;
-      display: inline-flex;
+      display: flex; */
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      padding: 5rem;
     }
     
     .info h2 {
       font-size: 36px;
       margin-bottom: 20px;
+      text-align: center;
     }
     
     .info p {
       font-size: 18px;
       line-height: 1.6;
       margin-bottom: 30px;
+      text-align: center;
+
     }
     .box{
       border-radius: 10px;
@@ -179,7 +187,7 @@
       margin: 6px;
     }
     
-    .events {
+    /* .events {
         margin: 0 auto;
         padding: 50px;
         background-color: #D1D1D1;
@@ -324,9 +332,147 @@
         max-width: 400px;
         margin: 0 auto;
       }
+    } */
+
+    .events-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
     }
+    
+    .events-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #D1D1D1;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .events-header h2 {
+      font-size: 36px;
+      margin: 0;
+    }
+    
+    .events-filter {
+      display: flex;
+      align-items: center;
+    }
+    
+    .events-filter select,
+    .events-filter button {
+      padding: 10px 20px;
+      margin-left: 20px;
+      font-size: 18px;
+      background-color: #512888;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    
+    .events-filter select {
+      background-color: #fff;
+      color: #512888;
+    }
+    
+    .events-filter select option {
+      color: #512888;
+    }
+    
+    .event-search {
+      width: 50%;
+      padding: 12px 20px;
+      margin-bottom: -5px;
+      font-size: 18px;
+      font-family: "Rubik", sans-serif;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    
+    .events {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .event {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #D1D1D1;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .event:hover {
+      transform: scale(1.05);
+    }
+    
+    .event-title {
+      text-align: center;
+      margin: 0;
+      font-size: var(--large-font-size);
+      font-weight: bold;
+    }
+    
+    .event-details {
+      text-align: center;
+      margin-top: 20px;
+      font-size: var(--medium-font-size);
+      line-height: 1.5;
+    }
+    
+    .event-location,.event-time,.event-date {
+      text-align: center;
+      margin-top: 10px;
+      font-size: var(--medium-font-size);
+      color: #512888;
+    }
+    
+    .eventSignUp-btn {
+      align-self: flex-end;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #512888;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    .eventSignUp-btn:hover {
+      background-color: #f0ac00be;
+    }
+    
+    @media screen and (max-width: 960px) {
+      .events {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .events {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+
+
     #mission-statement {
-      background-color: #f9f9f9;
+      background-color: #d1d1d1a8;
       padding: 50px;
       text-align: center;
     }
@@ -350,7 +496,7 @@
     
     #mission-statement .quotation-icons i {
       font-size: 36px;
-      color: #666666;
+      color: black;
     }
     
     #mission-statement .text-container {
@@ -360,14 +506,14 @@
     }
     
     #mission-statement h2 {
-      font-size: 36px;
+      font-size: var(--large-font-size);
       margin-bottom: 20px;
       color: #212121;
       flex: 1;
     }
     
     #mission-statement p {
-      font-size: 18px;
+      font-size: var(--medium-font-size);
       line-height: 1.5;
       margin-bottom: 20px;
       color: #666666;
