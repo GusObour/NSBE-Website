@@ -7,7 +7,7 @@ const DonationsAndSponsors = () => {
   useEffect(() => {
     const fetchSponsors = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/sponsors');
+        const response = await axios.get('/sponsors');
         setSponsors(response.data);
       } catch (error) {
         console.error('Error fetching sponsors:', error);

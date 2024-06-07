@@ -7,7 +7,7 @@ const Leadership = () => {
   useEffect(() => {
     const fetchLeaders = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/leadership');
+        const response = await axios.get('/leadership');
         setLeaders(response.data);
         console.log(response.data);
       } catch (error) {
