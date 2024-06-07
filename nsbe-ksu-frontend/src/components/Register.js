@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-  const [user, setUser] = useState({ username: '', password: '', phoneNumber: '', isLeader: false });
+  const [user, setUser] = useState({ firstName: '', lastName: '', email: '', username: '', password: '', phoneNumber: '', isLeader: false });
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -26,6 +26,39 @@ const Register = () => {
     <div className="container mx-auto py-20">
       <h1 className="text-3xl font-bold mb-8 text-center">Register</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-8 rounded shadow-md">
+        <div className="mb-4">
+          <label className="block text-gray-700">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            value={user.firstName}
+            onChange={handleInputChange}
+            className="border p-2 w-full"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            value={user.lastName}
+            onChange={handleInputChange}
+            className="border p-2 w-full"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={user.email}
+            onChange={handleInputChange}
+            className="border p-2 w-full"
+            required
+          />
+        </div>
         <div className="mb-4">
           <label className="block text-gray-700">Username</label>
           <input

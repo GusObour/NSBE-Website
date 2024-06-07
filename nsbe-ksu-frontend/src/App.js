@@ -11,7 +11,6 @@ import Footer from './components/Footer';
 import AdminDashboard from './components/AdminDashboard';
 import UserDashboard from './components/UserDashboard';
 import Settings from './components/Settings';
-import Profile from './components/Profile'; // Ensure Profile is imported
 import Login from './components/Login';
 import Register from './components/Register';
 
@@ -26,7 +25,6 @@ function App() {
           <Route path="/admin/*" element={token ? <AdminDashboard /> : <Login setToken={setToken} />} />
           <Route path="/user/*" element={token ? <UserDashboard /> : <Login setToken={setToken} />} />
           <Route path="/settings" element={token ? <Settings /> : <Login setToken={setToken} />} />
-          <Route path="/profile" element={token ? <Profile /> : <Login setToken={setToken} />} />
           <Route path="/login" element={<Login setToken={setToken} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={

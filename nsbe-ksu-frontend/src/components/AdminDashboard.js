@@ -2,10 +2,9 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { Navigate, Link, Routes, Route } from 'react-router-dom';
 import SponsorsAdmin from './Admin/SponsorsAdmin';
-import LeadershipAdmin from './Admin/LeadershipAdmin'; // Assuming you have a LeadershipAdmin component
-import EventsAdmin from './Admin/EventsAdmin'; // Assuming you have an EventsAdmin component
-import Profile from './Profile'; // Assuming you have a Profile component
-import Settings from './Settings'; // Assuming you have a Settings component
+import LeadershipAdmin from './Admin/LeadershipAdmin';
+import EventsAdmin from './Admin/EventsAdmin';
+import Settings from './Settings';
 
 const AdminDashboard = () => {
     const { auth, logout } = useContext(AuthContext);
@@ -19,7 +18,7 @@ const AdminDashboard = () => {
         {/* Sidebar */}
         <div className="w-64 bg-purple text-white flex flex-col">
           <div className="p-4 text-2xl font-bold">
-            <p>Hello {auth.user.username}</p>
+            <p>Hello {auth.user.firstName} {auth.user.lastName}</p>
           </div>
           <nav className="mt-4 flex-1">
             <ul>
@@ -31,9 +30,6 @@ const AdminDashboard = () => {
               </li>
               <li>
                 <Link to="/admin/events" className="block py-2.5 px-4 hover:bg-purple-700">Events</Link>
-              </li>
-              <li>
-                <Link to="/admin/profile" className="block py-2.5 px-4 hover:bg-purple-700">Profile</Link>
               </li>
               <li>
                 <Link to="/admin/settings" className="block py-2.5 px-4 hover:bg-purple-700">Settings</Link>
@@ -51,7 +47,6 @@ const AdminDashboard = () => {
             <Route path="sponsors" element={<SponsorsAdmin />} />
             <Route path="leadership" element={<LeadershipAdmin />} />
             <Route path="events" element={<EventsAdmin />} />
-            <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
           </Routes>
         </div>
