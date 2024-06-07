@@ -22,7 +22,7 @@ const initServer = async () => {
 
         // Middleware
         app.use(cors({
-            origin: 'http://localhost:3000', // replace with your frontend URL
+            origin: 'http://localhost:3000',
             credentials: true,
         }));
         app.use(express.json());
